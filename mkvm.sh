@@ -55,7 +55,8 @@ else # Interactive mode
 	echo
 	read template
 # Better test?
-	if [ "$template" = "" ]; then
+#	→ yes, maybe
+	if [ -z "$template" ]; then
 		echo "No template entered."
 		echo 
 	elif [ ! -f ${host_templates}/$template ]; then
