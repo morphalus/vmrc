@@ -54,8 +54,8 @@ else # Interactive mode
 	echo "Enter a template to use:"
 	echo
 	read template
-# Better test?
-	if [ "$template" = "" ]; then
+
+	if [ -z "$template" ]; then
 		echo "No template entered."
 		echo 
 	elif [ ! -f ${host_templates}/$template ]; then
